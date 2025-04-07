@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Player Up</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #player1 {
+            position: absolute;
+            top: 200px; /* Initial position */
+            left: 100px; /* Initial position */
+            transition: top 0.1s; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+    <img id="player1" src="player 1.jpeg" alt="Player 1">
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            const player1 = document.getElementById('player1');
+            const speed = 20; // Speed to move the player
+
+            if (event.key === 'ArrowUp') {
+                // Get the current top position and decrease it by the speed
+                const currentTop = parseInt(window.getComputedStyle(player1).top);
+                player1.style.top = `${currentTop - speed}px`;
+            }
+        });
+    </script>
+</body>
+</html>
