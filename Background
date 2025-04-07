@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Create the overlay div
+        const blackOverlay = document.createElement('div');
+        
+        // Apply styles to make it full-screen and black
+        blackOverlay.style.position = 'fixed';
+        blackOverlay.style.top = '0';
+        blackOverlay.style.left = '0';
+        blackOverlay.style.width = '100%';
+        blackOverlay.style.height = '100%';
+        blackOverlay.style.backgroundColor = 'black';
+        blackOverlay.style.zIndex = '9999'; // Ensures it is on top of all other elements
+        
+        // Append the overlay to the body
+        document.body.appendChild(blackOverlay);
+    </script>
+</body>
+</html>
